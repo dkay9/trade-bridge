@@ -34,7 +34,6 @@ const BUSINESS_TYPE_LABELS: Record<string, string> = {
 }
 
 export default function ProfileCard({
-  _id,
   companyName,
   country,
   businessType,
@@ -94,7 +93,7 @@ export default function ProfileCard({
             </Link>
           ) : (
             <button
-              onClick={onInterest}
+              onClick={() => onInterest?.()}
               className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1B3A6B] text-white text-sm font-semibold hover:bg-[#16305A] transition-colors"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
